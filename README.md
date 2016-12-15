@@ -1,4 +1,4 @@
-# Type Ahead Search
+# [Type Ahead Search](http://travis.bingo/typeAhead/)
 A search tool that displays results as you type
 
 ## New / Interesting Things I Used and Learned About
