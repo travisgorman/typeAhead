@@ -1,8 +1,6 @@
 # [Type Ahead Search](http://travis.bingo/typeAhead/)
 A search tool that displays results as you type
 
-![finished app]('https://github.com/travisgorman/typeAhead/blob/master/img/finished-app.png')
-
 [![finished app](https://github.com/travisgorman/typeAhead/blob/master/img/finished-app.png)](http://travis.bingo/typeAhead/)
 
 ## New / Interesting Things I Used and Learned About
