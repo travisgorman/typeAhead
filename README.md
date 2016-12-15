@@ -1,9 +1,10 @@
 # Type Ahead Search
 A search tool that displays results as you type
 
-* browser API: `fetch`
-* spread operator
-* `RegExp` constructor
+## New / Interesting Things I Used and Learned About
+* [Web API: `Fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+* [ES6 Spread Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)
+* [`RegExp` Global Object Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 
 #Process 
