@@ -30,12 +30,12 @@ function displayMatches() {
 		const regex = new RegExp(this.value, 'gi');
 		const cityName = place.city.replace(regex,`<span class='hl'>${this.value}</span>`);
 		const stateName = place.state.replace(regex,`<span class='hl'>${this.value}</span>`);
-		return `
+		return (`
 			<li>
 				<span class='name'>${cityName}, ${stateName}</span>
 				<span class='population'>${numberWithCommas(place.population)}</span>
 			</li>
-		`;
+		`)
 	}).join('');
 	suggestions.innerHTML = html
 }
