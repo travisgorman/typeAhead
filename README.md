@@ -1,4 +1,4 @@
-# Type Ahead Search
+# [Type Ahead Search](http://travis.bingo/typeAhead/)
 A search tool that displays results as you type
 
 ![finished app]('img/finished-app.png')
