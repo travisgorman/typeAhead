@@ -10,14 +10,20 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 // format population numbers to include comma separators
 // highlight matching patterns in the displayed suggestions
 
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
 
+// event listeners on the search input
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
+
+// fetch data from an external enpoint and pushing it into an array we can use
 const cities = [];
-
 fetch(endpoint)
 	.then(blob => blob.json())
 		.then(data => cities.push(...data));
 
-
+// pass in a string pattern and an array, and it returns an array of items where the string pattern is found anywhere in the `city` or `state` value.
 function findMatches(wordToMatch, cities){
 	return cities.filter(place => {
 		const regex = new RegExp(wordToMatch, 'gi');
@@ -25,10 +31,12 @@ function findMatches(wordToMatch, cities){
 	});
 }
 
+// pass in a number, and it returns that number as a string with commas
 function numberWithCommas(x) {
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
+// maps over the matching items, returns an HTML string, and inserts it into the `suggestions` list (the results display)
 function displayMatches() {
 	const matchArray = findMatches(this.value, cities);
 	const html = matchArray.map(place => {
@@ -44,16 +52,3 @@ function displayMatches() {
 	}).join('');
 	suggestions.innerHTML = html
 }
-
-
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
-
-
-
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
-
-
-
-
